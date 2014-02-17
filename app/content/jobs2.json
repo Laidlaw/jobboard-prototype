@@ -1,0 +1,26 @@
+[ {
+  "title": "Trash Collector",
+  "location": "Baton Rouge",
+  "questions": "somethinf",
+  "applicants" : [
+
+{
+  "name":"Bill Hader",
+  "pic": "images/128.jpg",
+  "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
+},
+{
+  "name":"Bill Hader",
+  "pic": "images/122.jpg",
+  "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
+},
+{
+  "name":"Bill Hader",
+  "pic": "images/123.jpg",
+  "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
+},
+{
+  "name":"Bill Hader",
+  "pic": "images/128-2.jpg",
+  "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
+}]}]

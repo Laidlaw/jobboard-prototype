@@ -1,0 +1,22 @@
+<div ng-repeat="job in jobs1">
+  <div class="panel">
+    <h2>{{job.title}}</h2>
+    <ul class="inline-list">
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li><a href="#">Link 5</a></li>
+    </ul>
+  </div>
+  <div class="row" data-equalizer>
+    <div class="large-6 columns panel" ng-repeat="applicant in job.applicants" data-equalizer-watch>
+        <div class="large-4 columns">
+          <img src="{{applicant.pic}}" alt="">
+          <h3>{{applicant.name}}</h3>
+        </div>
+        <h5>Score: 3/5</h5>
+        <div class="large-8 columns">{{applicant.summary}}</div>
+    </div>
+  </div>
+</div>

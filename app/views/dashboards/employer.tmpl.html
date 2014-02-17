@@ -1,0 +1,33 @@
+<section role="main" ng-controller="EmployerController">
+  <div class="row">
+    <div class="large-2 medium-2 columns" >
+      <h3>Bob the Employer</h3>
+      <input type="search" placeholder="Search">
+      <ul class="side-nav">
+        <li>
+          <h5>Post Job</h5>
+        </li>
+        <li><h5>Current Jobs</h5>
+        <ul>
+          <li ng-class="{active: activeTab == 'job-1'}">
+            <a href="" ng-click="activeTab='job-1'">Web Developer</a>
+          </li>
+          <li ng-class="{active: activeTab == 'job-2'}">
+            <a href="" ng-click="activeTab='job-2'">Trash Collector</a>
+          </li>
+          <li ng-class="{active: activeTab == 'job-3'}">
+            <a href="" ng-click="activeTab='job-3'">Junk Bondsman</a>
+          </li>
+          <li ng-class="{active: activeTab == 'job-4'}">
+            <a href="" ng-click="activeTab='job-4'">Spy</a>
+          </li>
+        </ul>
+        </li>
+        <li>
+          <h5>Previous Jobs</h5>
+        </li>
+
+      </ul>
+    </div>
+    <div ng-show="activeTab=='job-1'" class="dashboard large-10 medium-10 columns" data-ng-include="'views/dashboards/employer/job-1.tmpl.html'"></div>
+    <div ng-show="activeTab=='job-2'" class="dashboard large-10 medium-10 columns" data-ng-include="'views/dashboards/employer/job-2.tmpl.html'"></div>

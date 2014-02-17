@@ -1,0 +1,51 @@
+<section ng-controller="SeekerController" role=main>
+  <div class="row">
+    <div class="large-2 medium-2 columns" >
+
+      <h3 >{{name}}</h3>
+          <!-- <button ng-click="on()" ng-hide="showButton()"><strong>On</strong></button>
+          <button ng-click="off()" ng-show="showButton()"><strong>Off</strong></button> -->
+
+        <h5>Based on your <a href="" ng-class="{'green': showStatus}" ng-click="showStatus=!showStatus">preferences</a>, we have {{jobs.length}} new jobs for you</h5>
+
+        <div class="profile-settings panel" ng-show="showStatus" data-ng-include="'views/profile.tmpl.html'"></div>
+      <ul class="side-nav">
+
+          <li ng-class="{active: activeTab == 'suggestions'}">
+              <a ng-click="activeTab='suggestions'">Home &nbsp;<span class="round label">{{jobs.length}}</span></a>
+          </li>
+
+          <li ng-class="{active: activeTab == 'inbox'}">
+              <a ng-click="activeTab='inbox'">Inbox</a>
+          </li>
+          <li ng-class="{active: activeTab == 'sent'}">
+              <a ng-click="activeTab='sent'">Sent</a>
+          </li>
+          <li ng-class="{active: activeTab == 'search'}">
+              <a ng-click="activeTab='search'">Search</a>
+          </li>
+          <li ng-class="{active: activeTab == 'jobs'}">
+              <a ng-click="activeTab='jobs'">Saved Jobs</a>
+          </li>
+          <li>
+            <button class="btn btn-primary" ng-click="showComposePopup()">Compose</button>
+          </li>
+      </ul>
+    </div>
+
+    <div ng-show="activeTab=='suggestions'" data-ng-include="'views/suggestions.tmpl.html'" class="dashboard large-10 medium-8 columns"></div>
+
+    <div ng-show="activeTab=='inbox'" data-ng-include="'views/inbox.tmpl.html'" class="dashboard large-10 medium-8 columns"></div>
+
+    <div ng-show="activeTab=='sent'" data-ng-include="'views/sent.tmpl.html'" class="dashboard large-10 medium-8 columns"></div>
+
+    <div ng-show="activeTab=='search'" data-ng-include="'views/search.tmpl.html'" class="dashboard large-10 medium-8 columns"></div>
+
+    <div ng-show="activeTab=='jobs'" data-ng-include="'views/jobs.tmpl.html'" class="dashboard large-10 medium-8 columns"></div>
+  </div>
+
+
+    <div data-ng-include="'views/modals/detailView.tmpl.html'" ></div>
+
+    <div data-ng-include="'views/modals/composeView.tmpl.html'" ></div>
+</section>

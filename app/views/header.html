@@ -1,0 +1,27 @@
+<div class="header ng-scope" ng-controller="HeaderController">
+  <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+      <a class="pure-menu-heading" href="">Career Fair</a>
+        <ul id="src-node">
+            <li>
+              <a href="#" class="pure-button" ng-click="dropdown()"><i class="fa fa-user"></i></a>
+            <ul>
+                <!-- <li><a href="#/signup">Sign Up</a></li>
+                <li><a href="#/signin">Sign In</a></li> -->
+                <li><a ng-click="logout()">Logout</a></li>
+                <li><a href="#/profile">Edit Profile</a></li>
+            </ul>
+            </li>
+            <!-- <li><a href="#/signin">Signin</a></li> -->
+        </ul>
+        <ul id="search-bar">
+          <!-- <li class="pure-menu-selected"><a href="#">Home</a></li> -->
+          <li><a >Event</a></li>
+          <li>
+            <form class="pure-form">
+              <input type="text" class="pure-input-rounded">
+              <button type="submit" class="pure-button"><i class="fa fa-search"></i></button>
+            </form>
+          </li>
+        </ul>
+  </div>
+</div>

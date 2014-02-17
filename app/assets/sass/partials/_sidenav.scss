@@ -1,0 +1,35 @@
+@mixin bro($color) {
+&:after {
+          content: "";
+          position: absolute;
+          width:30px;
+          height:100%;
+          background:$color;
+          right:-30px;
+          top:0;
+        }
+      }
+
+.side-nav {
+
+    padding:0 !important;
+    a {
+      padding: 10px;
+    }
+    a:hover {
+      background:$emphasis-minor;
+      color:$contra-emphasis-minor;
+      @include bro($emphasis-minor);
+
+    }
+    li {margin:0;}
+    li.active {
+      a {
+        background: $emphasis;
+        color:$contra-emphasis !important;
+        @include bro($emphasis);
+
+      }
+    }
+
+}

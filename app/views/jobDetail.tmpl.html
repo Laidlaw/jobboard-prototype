@@ -1,0 +1,78 @@
+
+  <div class="sticky" >
+    <div ng-show="jobDetailVisible">
+      <h3>{{ selectedJob.title }}</h3>
+      <nav>
+        <span>{{ selectedJob.company }}</span>
+        <span>Date Posted: {{ selectedJob.date | date: 'MMM d' }}</span>
+
+      </nav>
+      <hr>
+      <ul class="button-group round">
+        <li><a href="" class="small button secondary" ng-class="{active: selected == '1'}" ng-click="selected=1">Summary</a></li>
+        <li><a href="" class="small button secondary" ng-class="{active: selected == '2'}" ng-click="selected=2">Benefits</a></li>
+        <li><a href="" class="small button secondary" ng-class="{active: selected == '3'}" ng-click="selected=3">Questions</a></li>
+      </ul>
+      <div ng-show="selected == 1">
+        <p>{{ selectedJob.about }}</p>
+      </div>
+      <div ng-show="selected == 2">
+        <p>Benefits</p>
+      </div>
+      <div ng-show="selected == 3">
+        <h4>A List of Knockout Questions</h4>
+         <div class="row">
+          <div class="large-12 columns">
+            <label>Here's a Legit Question</label>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+            <label>Here's a Legit Question</label>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary disabled">Apply</button>
+
+    <!-- <div ng-repeat="detail in selectedJob.job"> -->
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closePopup()">&times;</button> -->
+
+    <!-- </div> -->
+
+        <!-- <strong>From:</strong> {{selectedEmail.from}}<br />
+        <strong>To:</strong> {{selectedEmail.to}}<br />
+        <strong>Date:</strong> {{selectedEmail.date | date:'MMM d' }}<br />
+        <br />
+        <span style="white-space:pre">{{selectedEmail.body}}</span> -->
+
+        <!-- <dl class="tabs" data-tab>
+          <dd class="active"><a href="#panel2-1">Tab 1</a></dd>
+          <dd><a href="#panel2-2">Tab 2</a></dd>
+          <dd><a href="#panel2-3">Tab 3</a></dd>
+          <dd><a href="#panel2-4">Tab 4</a></dd>
+        </dl>
+        <div class="tabs-content">
+          <div class="content active" id="panel2-1">
+            <p>First panel content goes here...</p>
+          </div>
+          <div class="content" id="panel2-2">
+            <p>Second panel content goes here...</p>
+          </div>
+          <div class="content" id="panel2-3">
+            <p>Third panel content goes here...</p>
+          </div>
+          <div class="content" id="panel2-4">
+            <p>Fourth panel content goes here...</p>
+          </div>
+        </div> -->
+
+    <div class="modal-footer">
+        <a href="" class="btn" ng-click="forward()">Save</a>
+        <a href="" class="btn" ng-click="reply()">Apply</a>
+        <a href="" class="btn btn-primary" ng-click="deleteJob(job)">Delete</a>
+        <a href="" class="btn small" ng-click="hideJobDetail()">X</a>
+    </div>
+</div>
