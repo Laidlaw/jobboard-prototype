@@ -1,0 +1,52 @@
+.side-nav {
+form {
+  border-radius: 1.5em;
+  position: relative;
+  height: 3em;
+  margin: 2em auto;
+  max-width: 30em;
+  overflow: hidden;
+  width: 95%;
+}
+
+input {
+  border: none;
+  height: 100%;
+
+  &:focus {
+    outline: none;
+
+  }
+}
+
+input[type="text"]{
+  padding: 0 6em 0 1em;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background: #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5em;
+}
+
+// Second demo sliding in submit button
+
+.input2 {
+
+  &:focus {
+   padding: 0 6em 0 1em;
+  }
+
+  &:focus + & {
+    right: 0;
+  }
+}
+
+input.input2[type="submit"] {
+  right: -5em;
+  transition: 0.5s;
+}
+}

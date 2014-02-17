@@ -4,14 +4,17 @@ $emphasis: darken($dull, 10%);
 $contra-emphasis: white;
 $emphasis-minor: darken($dull, 15%) !important;
 $contra-emphasis-minor: darken(white, 5%) !important;
-
+$input-border-radius: 30px;
 @import "partials/sidenav";
+// @import "partials/forms";
 
 
 section[role=main] {
   background: $dull;
 }
-
+.micro {
+  font-size:8px;
+}
 .row {
 max-width: 90rem;
 }

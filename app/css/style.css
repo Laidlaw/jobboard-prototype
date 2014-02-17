@@ -41,62 +41,67 @@
   top: 0;
 }
 
-/* line 11, ../assets/sass/style.scss */
+/* line 12, ../assets/sass/style.scss */
 section[role=main] {
   background: #e9e9e9;
 }
 
 /* line 15, ../assets/sass/style.scss */
+.micro {
+  font-size: 8px;
+}
+
+/* line 18, ../assets/sass/style.scss */
 .row {
   max-width: 90rem;
 }
 
-/* line 19, ../assets/sass/style.scss */
+/* line 22, ../assets/sass/style.scss */
 .dashboard {
   background: white;
   border-left: 10px solid #d0d0d0;
 }
 
-/* line 23, ../assets/sass/style.scss */
+/* line 26, ../assets/sass/style.scss */
 .panel {
   margin-bottom: 0;
   background: white;
 }
 
-/* line 27, ../assets/sass/style.scss */
+/* line 30, ../assets/sass/style.scss */
 .sticky {
   position: fixed;
   top: 70px;
 }
 
-/* line 31, ../assets/sass/style.scss */
+/* line 34, ../assets/sass/style.scss */
 input[type=search] {
   border-radius: 30px;
 }
 
-/* line 34, ../assets/sass/style.scss */
+/* line 37, ../assets/sass/style.scss */
 .secondary.active {
   background-color: #b9b9b9;
 }
 
-/* line 37, ../assets/sass/style.scss */
+/* line 40, ../assets/sass/style.scss */
 .top-bar-section > ul {
   background: none;
 }
 
-/* line 38, ../assets/sass/style.scss */
+/* line 41, ../assets/sass/style.scss */
 .nav-dropdown {
   position: absolute;
   width: 100%;
   z-index: 3;
 }
-/* line 42, ../assets/sass/style.scss */
+/* line 45, ../assets/sass/style.scss */
 .nav-dropdown li {
   clear: both;
   z-index: 3;
 }
 
-/* line 48, ../assets/sass/style.scss */
+/* line 51, ../assets/sass/style.scss */
 .modal {
   position: absolute;
   left: 50%;
@@ -112,42 +117,42 @@ input[type=search] {
   top: 5.55556rem;
 }
 
-/* line 63, ../assets/sass/style.scss */
+/* line 66, ../assets/sass/style.scss */
 .close {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-/* line 69, ../assets/sass/style.scss */
+/* line 72, ../assets/sass/style.scss */
 a {
   position: relative;
 }
 
-/* line 70, ../assets/sass/style.scss */
+/* line 73, ../assets/sass/style.scss */
 a:hover {
   color: #1ccaff;
 }
 
-/* line 71, ../assets/sass/style.scss */
+/* line 74, ../assets/sass/style.scss */
 .green {
   color: #43ac6a !important;
 }
 
-/* line 73, ../assets/sass/style.scss */
+/* line 76, ../assets/sass/style.scss */
 .job-list section {
   display: table;
 }
-/* line 75, ../assets/sass/style.scss */
+/* line 78, ../assets/sass/style.scss */
 .job-list section h3 {
   padding-right: 20px;
 }
-/* line 76, ../assets/sass/style.scss */
+/* line 79, ../assets/sass/style.scss */
 .job-list section h3, .job-list section nav {
   display: inline-block;
 }
 
-/* line 81, ../assets/sass/style.scss */
+/* line 84, ../assets/sass/style.scss */
 .nav-counter {
   position: absolute;
   top: -1px;
@@ -173,7 +178,7 @@ a:hover {
   box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 1px rgba(0, 0, 0, 0.12);
 }
 
-/* line 107, ../assets/sass/style.scss */
+/* line 110, ../assets/sass/style.scss */
 .nav-counter-green {
   background: #75a940;
   border: 1px solid #42582b;
@@ -183,7 +188,7 @@ a:hover {
   background-image: linear-gradient(to bottom, #8ec15b, #689739);
 }
 
-/* line 116, ../assets/sass/style.scss */
+/* line 119, ../assets/sass/style.scss */
 .nav-counter-blue {
   background: #3b8de2;
   border: 1px solid #215a96;

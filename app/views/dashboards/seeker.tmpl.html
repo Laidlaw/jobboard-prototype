@@ -9,8 +9,11 @@
         <h5>Based on your <a href="" ng-class="{'green': showStatus}" ng-click="showStatus=!showStatus">preferences</a>, we have {{jobs.length}} new jobs for you</h5>
 
         <div class="profile-settings panel" ng-show="showStatus" data-ng-include="'views/profile.tmpl.html'"></div>
+        <form>
+          <input class="input2" type="text" ng-model="searchText" placeholder="Filter"/>
+          <!-- <input class="input2" type="submit" value="Search"/> -->
+        </form>
       <ul class="side-nav">
-
           <li ng-class="{active: activeTab == 'suggestions'}">
               <a ng-click="activeTab='suggestions'">Home &nbsp;<span class="round label">{{jobs.length}}</span></a>
           </li>
@@ -21,11 +24,12 @@
           <li ng-class="{active: activeTab == 'sent'}">
               <a ng-click="activeTab='sent'">Sent</a>
           </li>
-          <li ng-class="{active: activeTab == 'search'}">
+          <!-- <li ng-class="{active: activeTab == 'search'}">
               <a ng-click="activeTab='search'">Search</a>
-          </li>
+
+          </li> -->
           <li ng-class="{active: activeTab == 'jobs'}">
-              <a ng-click="activeTab='jobs'">Saved Jobs</a>
+              <a ng-click="activeTab='jobs'">Favorite Jobs</a>
           </li>
           <li>
             <button class="btn btn-primary" ng-click="showComposePopup()">Compose</button>

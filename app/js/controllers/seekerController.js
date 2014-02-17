@@ -4,6 +4,7 @@ function SeekerController($scope, $http) {
     $scope.composeEmail = {};
     $scope.name = 'Alan';
     $scope.activeTab = "suggestions";
+    $scope.selected = 1;
     $scope.sentEmails = [];
     $scope.jobShow = true;
 
