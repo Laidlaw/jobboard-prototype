@@ -1,0 +1,58 @@
+<!--  <div class="panel row">
+    <div class="columns large-4" ng-repeat="email in emails" ng-click="showPopup(email)">
+      <h2>{{email.job}}</h2><span>{{email.location}}</span>
+      <h5>{{ email.from }}</h5> | <span>{{ email.date }}</span>
+      <ul class="inline-list">
+        <li><a ng-click="showDescriptionPopup()" href="">Edit</a></li>
+        <li><a href="">Deactivate</a></li>
+        <li><a href="">Filter Results</a></li>
+      </ul>
+    </div>
+    <div class="columns large-8">
+      <h5>Job Description</h5>
+      <p>{{job.summary}}</p>
+    </div>
+  </div> -->
+  <div class="modal-sheath" ng-show="isDescriptionPopupVisible"></div>
+  <div class="row" >
+    <div class="panel columns small-12" ng-repeat="email in emails" ng-click="showPopup(email)">
+      <div class="small-4 columns">
+        <!-- <img src="{{email.pic}}" alt=""> -->
+        <span class="">{{email.job}}&nbsp;<i class="label round secondary">at</i>&nbsp;{{email.jobCompany}}</span>
+        <h3>{{email.from}} | {{email.company}}</h3>
+      </div>
+
+      <table class="table table-bordered table-condensed small-8 columns">
+        <tbody>
+          <tr ng-repeat="message in email.messages">
+            <td>{{message.from}}</td>
+            <td>{{message.subject}}</td>
+            <td>{{message.date}}</td>
+          </tr>
+        </tbody>
+       </table>
+    </div>
+  </div>
+
+
+        <!-- <ul class="inline-list">
+          <li><a class="glyphicon glyphicon-asterisk" title="Answers">Answers</a></li>
+          <li><a class="glyphicon glyphicon-bullhorn" title="Contact">Contact</a></li>
+          <li><a class="glyphicon glyphicon-export" title="Export">Export</a></li>
+          <li><a class="glyphicon glyphicon-envelope" title="Notes">Notes</a></li>
+          <li><a class="glyphicon glyphicon-save" title="Save">Save</a></li>
+        </ul> -->
+
+<div data-ng-include="'views/seeker/messaging/detailView.tmpl.html'" ></div>
+
+<div data-ng-include="'views/seeker/messaging/composeView.tmpl.html'" ></div>
+
+<!-- <table class="table table-bordered table-condensed large-9 medium-8 columns">
+  <tbody>
+      <tr ng-repeat="email in emails" ng-click="showPopup(email)">
+          <td>{{ email.from }}</td>
+          <td>{{ email.subject }}</td>
+          <td>{{ email.date }}</td>
+      </tr>
+  </tbody>
+</table> -->

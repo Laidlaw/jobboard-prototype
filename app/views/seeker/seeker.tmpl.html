@@ -1,0 +1,73 @@
+<section ng-controller="SeekerController" role=main>
+  <div class="row">
+    <div class="large-2 medium-2 columns" >
+
+      <h3><a href=""
+              ng-click="showPreferences()"
+              ng-mouseenter="showEdit=!showEdit"
+              ng-mouseleave="showEdit=!showEdit">
+              {{name}}&nbsp;&nbsp;&nbsp;
+              <!-- <span ng-show="showEdit" ng-click="showDescriptionPopup()" class="micro round label">EDIT</span> -->
+            </a>
+          </h3>
+          <!-- <button ng-click="on()" ng-hide="showButton()"><strong>On</strong></button>
+          <button ng-click="off()" ng-show="showButton()"><strong>Off</strong></button> -->
+
+        <h5>Based on your <a href="" ng-class="{'green': showStatus}" ng-click="showPreferences()">preferences</a>, we have {{jobs.length}} new jobs for you</h5>
+        <form>
+          <input class="input2 round" type="text" ng-model="searchText" placeholder="Search"/>
+          <!-- <input class="input2" type="submit" value="Search"/> -->
+        </form>
+      <ul class="side-nav">
+          <li ng-class="{active: activeTab == 'suggestions'}">
+              <a ng-click="activeTab='suggestions'">New Jobs &nbsp;<span class="round label micro">{{jobs.length}}</span></a>
+          </li>
+          <!-- <li ng-class="{active: activeTab == 'active'}">
+              <a ng-click="expand!=expand">Active Jobs</span></a>
+              <ul ng-show="expanded">
+            <li
+              ng-repeat="job in activeJobs"
+              ng-class="{active: activeTab == 'job{{job.id}}'}">
+              <a href="" ng-click="switchActiveTab(job.id)">
+              {{job.title}}</a>
+            </li>
+          </ul>
+          </li> -->
+          <li ng-class="{active: activeTab == 'inbox'}">
+              <a ng-click="activeTab='inbox'">Messages</a>
+          </li>
+          <li ng-class="{active: activeTab == 'sent'}">
+              <a ng-click="activeTab='sent'">Sent</a>
+          </li>
+
+          <!-- <li ng-class="{active: activeTab == 'search'}">
+              <a ng-click="activeTab='search'">Search</a>
+
+          </li> -->
+          <li ng-class="{active: activeTab == 'jobs'}">
+              <a ng-click="activeTab='jobs'">Favorite Jobs</a>
+          </li>
+          <li>
+            <button class="btn btn-primary" ng-click="showComposePopup()">Compose</button>
+          </li>
+      </ul>
+    </div>
+
+    <div ng-show="activeTab=='suggestions'" data-ng-include="'views/seeker/jobs/suggestions.tmpl.html'" class="dashboard medium-10 small-12 columns"></div>
+
+    <!-- <div ng-show="activeTab=='activeJobs'" data-ng-include="'views/activeJobs.tmpl.html'" class="dashboard large-10 medium-8 columns"></div> -->
+
+    <div ng-show="activeTab=='inbox'" data-ng-include="'views/seeker/messaging/inbox.tmpl.html'" class="dashboard medium-10 small-12 columns"></div>
+
+    <div ng-show="activeTab=='sent'" data-ng-include="'views/seeker/messaging/sent.tmpl.html'" class="dashboard medium-10 small-12 columns"></div>
+
+    <div ng-show="activeTab=='search'" data-ng-include="'views/seeker/messaging/search.tmpl.html'" class="dashboard medium-10 small-12 columns"></div>
+
+    <div ng-show="activeTab=='jobs'" data-ng-include="'views/seeker/jobs/jobs.tmpl.html'" class="dashboard medium-10 small-12 columns"></div>
+  </div>
+
+
+
+
+    <div class="profile-settings" data-ng-include="'views/seeker/profile.tmpl.html'"></div>
+</section>

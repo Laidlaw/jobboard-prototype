@@ -11,10 +11,10 @@
       }
 
 .side-nav {
-
     padding:0 !important;
     a {
       padding: 10px;
+      margin-left:-10px;
     }
     a:hover {
       background:$emphasis-minor;
@@ -22,7 +22,7 @@
       @include bro($emphasis-minor);
 
     }
-    li {margin:0;}
+    li {margin:0; list-style:none;}
     li.active {
       a {
         background: $emphasis;

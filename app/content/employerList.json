@@ -46,6 +46,20 @@
           "answer": "Steve jobs",
           "correct": false
         }]
+    },
+    {
+      "id": 2,
+      "question": "Are you P2P compliant?",
+      "answers": [{
+          "id": 0,
+          "answer": "Yes",
+          "correct": false
+        },
+        {
+          "id": 1,
+          "answer": "No",
+          "correct": true
+        }]
     }
     ],
   "applicants" : [
@@ -136,26 +150,31 @@
     {
       "name":"Bill Hader",
       "pic": "images/123.jpg",
+      "score": "2/2",
       "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
     },
     {
       "name":"Bill Hader",
       "pic": "images/128-2.jpg",
+      "score": "2/2",
       "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
     },
     {
       "name":"Commander Worf",
       "pic": "images/128-1.jpg",
+      "score": "2/2",
       "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
     },
     {
       "name":"Sean Connery",
       "pic": "images/128.jpg",
+      "score": "2/2",
       "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
     },
     {
       "name":"June Bug",
       "pic": "images/122.jpg",
+      "score": "2/2",
       "summary":"Credibly streamline best-of-breed leadership skills before world-class leadership. Uniquely pursue timely strategic theme areas rather than top-line processes. Competently seize process-centric technologies after integrated imperatives."
     }]
   }

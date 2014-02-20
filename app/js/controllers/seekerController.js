@@ -2,7 +2,7 @@ function SeekerController($scope, $http) {
     $scope.isPopupVisible = false;
     $scope.isComposePopupVisible = false;
     $scope.composeEmail = {};
-    $scope.name = 'Alan';
+    $scope.name = 'Alan Applicant';
     $scope.activeTab = "suggestions";
     $scope.selected = 1;
     $scope.sentEmails = [];
@@ -100,6 +100,15 @@ function SeekerController($scope, $http) {
         $scope.isComposePopupVisible = false;
     };
 
+    $scope.showPreferences = function() {
+            $scope.composeEmail = {};
+            $scope.isPreferencesPopupVisible = true;
+        };
+
+    $scope.closePreferences = function() {
+        $scope.isPreferencesPopupVisible = false;
+    };
+
     $scope.showPopup = function(email) {
         $scope.isPopupVisible = true;
         $scope.selectedEmail = email;
@@ -126,23 +135,106 @@ function SeekerController($scope, $http) {
 
     $scope.emails = [
         {
-            from: 'John',
+            from: 'John Linquist',
+            job: 'Web Developer',
+            company: 'Google',
+            jobCompany: 'Google',
             to: 'me',
-            subject: 'I love angular',
+            messages: [{
+                from: 'John',
+                subject: 'Your Scores Were Truly Embarrassing',
+                body: 'just kidding',
+                align: 'left',
+                date: 'Dec 8'
+            },
+            {
+                from: 'Me',
+                subject: 'You are a jerk',
+                body: 'you are a jerk',
+                align: 'right',
+                date: 'Dec 8'
+            }
+
+            ],
+            subject: 'Your Scores Were Truly Embarrassing',
             date: 'Jan 1',
             body: 'hello world!'
         },
         {
-            from: 'Jack',
+            from: 'Jack Knight',
+            job: 'Truck Driver',
+            company: 'Laidlaw',
+            jobCompany: 'Laidlaw',
             to: 'me',
-            subject: 'Angular and I are just friends',
+            messages: [{
+                from: 'Jack',
+                subject: 'I would like you to come work for me',
+                body: 'just kidding',
+                align: 'left',
+                date: 'Dec 8'
+            },
+            {
+                from: 'Me',
+                subject: 'You are a jerk',
+                body: 'you are a jerk',
+                align: 'right',
+                date: 'Dec 8'
+            }
+
+            ],
+            subject: 'I would like you to come work for me',
             date: 'Feb 15',
             body: 'just kidding'
         },
         {
-            from: 'Ember',
+            from: 'Sally Forth',
+            job: 'International Spy',
+            company: 'Russia',
+            jobCompany: 'America',
             to: 'me',
-            subject: 'I hate you Angular!',
+            messages: [{
+                from: 'Sally',
+                subject: 'What a fun and rewarding application',
+                body: 'just kidding',
+                align: 'left',
+                date: 'Dec 8'
+            },
+            {
+                from: 'Me',
+                subject: 'You are a jerk',
+                body: 'you are a jerk',
+                align: 'right',
+                date: 'Dec 8'
+            }
+
+            ],
+            subject: 'What a fun and rewarding application',
+            date: 'Dec 8',
+            body: 'wassup dude'
+        },
+        {
+            from: 'Trudy Trombone',
+            job: 'Web Developer',
+            company: 'Google',
+            jobCompany: 'Google',
+            to: 'me',
+            messages: [{
+                from: 'Trudy',
+                subject: 'What is the status of VCf?',
+                body: 'just kidding',
+                align: 'left',
+                date: 'Dec 8'
+            },
+            {
+                from: 'Me',
+                subject: 'You are a jerk',
+                body: 'you are a jerk',
+                align: 'right',
+                date: 'Dec 8'
+            }
+
+            ],
+            subject: 'What a fun and rewarding application',
             date: 'Dec 8',
             body: 'wassup dude'
         }

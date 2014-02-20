@@ -1,0 +1,65 @@
+<section role="main" ng-controller="EmployerController" >
+  <div class="row">
+    <div class="large-2 medium-2 columns" >
+      <h3>Bob the Employer</h3>
+      <input type="search" placeholder="Search" ng-model="searchText">
+      <ul class="side-nav">
+        <li>
+          <h5><a href="" ng-click="activeTab='postJob'">Post Job</a></h5>
+        </li>
+        <li>
+          <h5 ng-click="expanded=!expanded ">
+              Current Jobs
+             <!--  <span ng-show="showEdit" ng-click="activeTab='allJobs'" class="micro round label">LIST</span> -->
+          </h5>
+          <ul ng-show="expanded">
+            <li
+            ng-repeat="job in jobs"
+            ng-class="{active: activeTab == 'job{{job.id}}'}"><a href=""
+              ng-click="switchActiveTab(job.id)"
+              ng-mouseenter="showEdit=!showEdit"
+              ng-mouseleave="showEdit=!showEdit">
+              {{job.title}}&nbsp;&nbsp;&nbsp;<span ng-show="showEdit" ng-click="showDescriptionPopup()" class="micro round label">EDIT</span></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h5>Previous Jobs</h5>
+        </li>
+        <li>
+          <h5><a href="" ng-click="activeTab='toolkit'">Toolkit</a></h5>
+        </li>
+        <hr>
+        <li>
+          <h5>Saved Applicants</h5>
+        </li>
+
+      </ul>
+    </div>
+
+<div ng-show="activeTab=='postJob'" class="dashboard large-10 medium-10 columns" data-ng-include="'views/employer/postJob.tmpl.html'"></div>
+
+<div ng-show="activeTab=='toolkit'" class="dashboard large-10 medium-10 columns">
+  <h2>Placeholder for Toolkit</h2>
+</div>
+
+<div ng-show="activeTab=='job{{job.id}}'" data-ng-include="'views/employer/currentJobs.tmpl.html'" class="dashboard large-10 medium-10 columns" ng-repeat="job in jobs"></div>
+
+
+
+<!-- <div ng-show="activeTab=='allJobs'" class="dashboard large-10 medium-10 columns" >
+  <div class="row" data-equalizer>
+    <div class="large-6 columns panel" ng-repeat="job in jobs" data-equalizer-watch>
+  {{job.title}}
+    </div>
+  </div>
+</div>
+ -->
+
+
+<!--
+
+    <div ng-show="activeTab=='job-1'" class="dashboard large-10 medium-10 columns" data-ng-include="'views/dashboards/employer/job-1.tmpl.html'"></div>
+    <div ng-show="activeTab=='job-2'" class="dashboard large-10 medium-10 columns" data-ng-include="'views/dashboards/employer/job-2.tmpl.html'"></div> -->
+
+</section>

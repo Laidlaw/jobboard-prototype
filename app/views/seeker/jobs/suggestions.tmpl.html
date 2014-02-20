@@ -10,8 +10,8 @@
 
           <nav ng-show="showStatus">
             <a ng-click="deleteJob(job)">Delete</a>
-            <a ng-click="delete(fruit)">Save</a>
-            <a ng-click="delete(fruit)">Email</a>
+            <a ng-click="delete(job)">Save</a>
+            <a ng-click="delete(job)">Email</a>
           </nav>
         </section>
 
@@ -23,6 +23,6 @@
 
       </div>
   </div>
-  <div class="columns large-6" data-ng-include="'views/jobDetail.tmpl.html'"></div>
+  <div class="columns large-6" data-ng-include="'views/seeker/jobs/jobDetail.tmpl.html'"></div>
 
 </div>

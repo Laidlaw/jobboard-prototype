@@ -2,6 +2,7 @@ function EmployerController($scope, $http) {
     $scope.check = "chekc";
     $scope.url = 'content/employerList.json';
     $scope.activeTab = "job1";
+    $scope.expanded = true;
     // $scope.url = 'https://jobs.github.com/positions.json?description=python&location=sf&full_time=true';
     $scope.jobs = [];
 
@@ -21,6 +22,7 @@ function EmployerController($scope, $http) {
     $scope.showDescriptionPopup = function() {
         $scope.composeEmail = {};
         $scope.isDescriptionPopupVisible = true;
+
     };
 
     $scope.closeDescriptionPopup = function() {

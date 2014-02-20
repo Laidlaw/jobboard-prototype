@@ -13,10 +13,20 @@
 
      <!--  <li class="active"><a href="#">Right Button Active</a></li> -->
       <li class="has-dropdown">
-        <a href="" ng-click="showStatus=!showStatus">Settings</a>
-        <ul class="nav-dropdown" ng-show="showStatus">
+        <a href="" ng-click="showSettings=!showSettings" class="glyphicon glyphicon-wrench">&nbsp;Settings</a>
+        <ul class="nav-dropdown columns small-12" ng-show="showSettings">
+          <li><a href="#/view1">Profile</a></li>
+          <li><a href="#/view1">Log Out</a></li>
+
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="" ng-click="showStatus=!showStatus" class="glyphicon glyphicon-eye-open">&nbsp;Views</a>
+        <ul class="nav-dropdown columns small-12" ng-show="showStatus">
           <li><a href="#/view1">Seeker</a></li>
           <li><a href="#/view2">Employer</a></li>
+          <li><a href="#/view3">Chamber</a></li>
+          <li><a href="#/event">Event</a></li>
         </ul>
       </li>
     </ul>

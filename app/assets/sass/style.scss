@@ -1,11 +1,30 @@
 @import "compass/utilities";
+
 $dull: #e9e9e9;
 $emphasis: darken($dull, 10%);
 $contra-emphasis: white;
 $emphasis-minor: darken($dull, 15%) !important;
 $contra-emphasis-minor: darken(white, 5%) !important;
 $input-border-radius: 30px;
+
+// $iconSpritePath: "../images/glyphicons-halflings.png";
+// $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+//@import "bootstrap-sass/lib/bootstrap";
+//@import "/bower_components/selectize/dist/css/selectize.bootstrap3.css";
+
+// $top-nav-buffer: 38px;
+// @import "macroNav";
+// @import "email";
+// @import "layout";
+/* Put your CSS here */
+
+
+
+// @import "/bootstrap-sass/lib/glyphicons";
+@import "partials/glyphicons";
 @import "partials/sidenav";
+@import "partials/notifications";
 // @import "partials/forms";
 
 
@@ -14,7 +33,20 @@ section[role=main] {
 }
 .micro {
   font-size:8px;
+  line-height:.5;
+  vertical-align:middle;
 }
+input, textarea {
+    &.macro {
+      font-size:36px;
+      height:auto;
+    }
+    &.round {
+      border-radius:30px;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
 .row {
 max-width: 90rem;
 }
@@ -27,6 +59,16 @@ max-width: 90rem;
   margin-bottom:0;
   background:white;
 }
+
+.modal-sheath {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 3;
+  background: rgba(0,0,0,.4);
+}
 .sticky {
   position: fixed;
   top:70px;
@@ -37,14 +79,21 @@ input[type=search] {
 .secondary.active {
  background-color: #b9b9b9;
 }
+.top-bar-section li>a.glyphicon {
+
+      font-family: 'Glyphicons Halflings' !important;
+
+    }
 .top-bar-section > ul {background:none;}
 .nav-dropdown {
   position: absolute;
-  width:100%;
   z-index: 3;
   li {
+    display: block;
+    width:100%;
     clear:both;
     z-index: 3;
+
   }
 }
 
@@ -81,46 +130,3 @@ a:hover {color:#1ccaff;}
   }
 }
 
-.nav-counter {
-  position: absolute;
-  top: -1px;
-  right: -5px;
-  min-width: 8px;
-  height: 20px;
-  line-height: 20px;
-  z-index: 2;
-  margin-top: -1px;
-
-  padding: 0 6px;
-  font-weight: normal;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  background: #e23442;
-  border: 1px solid #911f28;
-  border-radius: 11px;
-  background-image: -webkit-linear-gradient(top, #e8616c, #dd202f);
-  background-image: -moz-linear-gradient(top, #e8616c, #dd202f);
-  background-image: -o-linear-gradient(top, #e8616c, #dd202f);
-  background-image: linear-gradient(to bottom, #e8616c, #dd202f);
-  -webkit-box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 1px rgba(0, 0, 0, 0.12);
-  box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 1px rgba(0, 0, 0, 0.12);
-}
-
-.nav-counter-green {
-  background: #75a940;
-  border: 1px solid #42582b;
-  background-image: -webkit-linear-gradient(top, #8ec15b, #689739);
-  background-image: -moz-linear-gradient(top, #8ec15b, #689739);
-  background-image: -o-linear-gradient(top, #8ec15b, #689739);
-  background-image: linear-gradient(to bottom, #8ec15b, #689739);
-}
-
-.nav-counter-blue {
-  background: #3b8de2;
-  border: 1px solid #215a96;
-  background-image: -webkit-linear-gradient(top, #67a7e9, #2580df);
-  background-image: -moz-linear-gradient(top, #67a7e9, #2580df);
-  background-image: -o-linear-gradient(top, #67a7e9, #2580df);
-  background-image: linear-gradient(to bottom, #67a7e9, #2580df);
-}
